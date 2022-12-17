@@ -1,0 +1,88 @@
+{
+  "compilerOptions": {
+    // 目标语言版本,
+    "target": "esnext",
+    // 指定生成代码的模板标准,
+    "module": "esnext",
+    // node模块解析,
+    "moduleResolution": "node",
+    // 启用严格模式,
+    "strict": true,
+    // jsx模板解析,
+    "jsx": "preserve",
+    // 不允许隐式的any类型,
+    "noImplicitAny": true,
+    // 删除注释,
+    "removeComments": true,
+    // 生成目标文件的sourceMap文件,
+    "sourceMap": true,
+    // 不允许把null, undefined 赋值给其他变量,
+    "strictNullChecks": true,
+    // 允许导入json文件,
+    "resolveJsonModule": true,
+    // 允许额外的ts文件支持,
+    "esModuleInterop": true,
+    // 允许字符串下表表达式,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    // 解析非相对模块的基地址，默认是当前目录，防止引入文件报错,
+    "baseUrl": ".",
+    // 路径映射，相对于 baseUrl
+    "paths": {
+      "~/*": ["src/*"]
+    },
+    //,
+    "useDefineForClassFields": true,
+    //,
+    "isolatedModules": true,
+    // 所有的声明（*.d.ts）的类型检查，解决: 打包不报错,
+    "skipLibCheck": true,
+    "types": [
+      "vite/client",
+      "@intlify/vite-plugin-vue-i18n/client",
+      "vite-plugin-svg-icons/client"
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "strictFunctionTypes": false,
+    "allowJs": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./types"
+    ]
+  },
+  "include": [
+    "tests/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/**/*.d.ts",
+    "types/**/*.ts",
+    "build/**/*.ts",
+    "build/**/*.d.ts",
+    "mock/**/*.ts",
+    "vite.config.ts",
+    "src/auto-imports.d.ts",
+    "examples/**/*.ts",
+    "examples/**/*.d.ts",
+    "examples/**/*.tsx",
+    "examples/**/*.vue",
+    "packages/**/*.ts",
+    "packages/**/*.vue",
+    "packages/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "tests/server/**/*.ts",
+    "dist",
+    "**/*.js",
+    "lib"
+  ]
+}
