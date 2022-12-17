@@ -1,0 +1,24 @@
+// 我们也添加一个eslint忽略的文件
+
+*.sh
+node_modules
+*.md
+*.woff
+*.ttf
+.vscode
+.idea
+dist
+*.zip
+/public
+/docs
+.husky
+.local
+/bin
+Dockerfile
+pnpm-lock.yaml
+CHANGELOG.en-US.md
+docs/components.d.ts
+coverage
+play
+ssr-testing/cases/*
+!.*
