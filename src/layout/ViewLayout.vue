@@ -32,6 +32,18 @@
     <template #hContent>
       <div>header content</div>
     </template>
+    <template #tags>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: dimgray;
+        "
+      >
+        tags
+      </div>
+    </template>
     <template #view>
       <div class="main">main content</div>
     </template>
@@ -68,7 +80,7 @@ const state = reactive({
   isAvatar: true,
   darkText: '暗黑模式',
   logoutText: '退出',
-  settingItems: [{ command: 'test', text: 'test' } as typeof SettingItem],
+  settingItems: [{ command: 'test', text: 'test' } as SettingItem],
   languageChange: (val: string) => {
     window.console.log('OfsHorView language change:', val)
     if (val === 'zh-CN') {
@@ -99,7 +111,7 @@ const logout = () => {
 const settingCommand = (val: string | number | object) => {
   window.console.log('OfsHorView setting command:', val)
 }
-const menus: typeof SideMenu[] = [
+const menus: SideMenu[] = [
   {
     id: 1,
     parentId: 0,
@@ -123,7 +135,7 @@ const menus: typeof SideMenu[] = [
         type: 1,
         icon: 'view',
         orderNum: 1,
-      },
+      } as SideMenu,
     ],
   },
   {
@@ -149,7 +161,7 @@ const menus: typeof SideMenu[] = [
         type: 1,
         icon: 'view',
         orderNum: 1,
-      },
+      } as SideMenu,
     ],
   },
 ]
