@@ -25,7 +25,7 @@ app.use(ElementPlus)
 ## using in page
 
 ```html
-<horizontal-view
+<ofs-hor-view
   :side-width="260"
   :side-collapse-width="64"
   :header-height="50"
@@ -61,12 +61,12 @@ app.use(ElementPlus)
   <template #view>
     <div class="main">main content</div>
   </template>
-</horizontal-view>
+</ofs-hor-view>
 ```
 
 ```typescript
 import { reactive } from 'vue'
-import HorizontalView from '../packages/HorizontalView.vue'
+import OfsHorView from 'ofs-hor-views'
 import type { SettingItem, SideMenu } from 'ofs-hor-types'
 
 const state = reactive({
