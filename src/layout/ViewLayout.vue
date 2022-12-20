@@ -11,7 +11,7 @@
     :avatar-url="state.avatarUrl"
     :dark="state.dark"
     :is-language="state.isLanguage"
-    :is-theme-switch="state.isThemeSwitch"
+    :is-dark-switch="state.isDarkSwitch"
     :is-avatar="state.isAvatar"
     :dark-text="state.darkText"
     :logout-text="state.logoutText"
@@ -19,7 +19,7 @@
     @collapse="toggle"
     @select="menuSelected"
     @language="state.languageChange"
-    @theme-switch="themeSwitch"
+    @dark-switch="darkSwitch"
     @setting-command="settingCommand"
     @logout="logout"
   >
@@ -53,7 +53,7 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import OfsHorView from 'ofs-hor-views'
-import type { SettingItem, SideMenu } from 'ofs-hor-types'
+import type { MenuOption, SettingItem } from 'ofs-hor-types'
 
 const state = reactive({
   options: [
@@ -76,7 +76,7 @@ const state = reactive({
     'https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci81MDNmMTkxNDUwNzNkNmFkMjlhZWJkMDEzYTVmZjI3OD9zaXplPTQ5NiZkZWZhdWx0PXJldHJvIn0.5OSXtGzFm9QS7bDnYwGGZQSfatCPy25BzeoYaSmid_E', //默认值
   dark: true,
   isLanguage: true,
-  isThemeSwitch: true,
+  isDarkSwitch: true,
   isAvatar: true,
   darkText: '暗黑模式',
   logoutText: '退出',
@@ -100,7 +100,7 @@ const menuSelected = (val: string) => {
   window.console.log('OfsHorView menu selected:', val)
 }
 
-const themeSwitch = () => {
+const darkSwitch = () => {
   window.console.log('OfsHorView theme switch')
 }
 
@@ -111,7 +111,7 @@ const logout = () => {
 const settingCommand = (val: string | number | object) => {
   window.console.log('OfsHorView setting command:', val)
 }
-const menus: SideMenu[] = [
+const menus: MenuOption[] = [
   {
     id: 1,
     parentId: 0,
@@ -135,7 +135,7 @@ const menus: SideMenu[] = [
         type: 1,
         icon: 'view',
         orderNum: 1,
-      } as SideMenu,
+      } as MenuOption,
     ],
   },
   {
@@ -161,7 +161,7 @@ const menus: SideMenu[] = [
         type: 1,
         icon: 'view',
         orderNum: 1,
-      } as SideMenu,
+      } as MenuOption,
     ],
   },
 ]
