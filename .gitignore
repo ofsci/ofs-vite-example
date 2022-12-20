@@ -6,3 +6,6 @@ dist-ssr
 .idea/**
 package-lock.json
 pnpm-lock.yaml
+dist**
+lib
+lib**
