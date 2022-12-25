@@ -1,1 +1,1 @@
-declare module 'ofs-views-layout'
+declare module 'ofs-view-layout'

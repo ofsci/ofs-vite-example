@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
-import OfsHorView from 'ofs-views-layout'
-import 'ofs-views-layout/lib/style.css'
+import OfsHorView from 'ofs-view-layout'
+import 'ofs-view-layout/lib/style.css'
 
 import ElementPlus from 'element-plus'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'

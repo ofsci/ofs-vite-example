@@ -52,7 +52,7 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import OfsHorView from 'ofs-views-layout'
+import OfsHorView from 'ofs-view-layout'
 import type { MenuOption, SettingItem } from 'ofs-view-type'
 
 const state = reactive({
