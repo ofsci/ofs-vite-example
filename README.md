@@ -1,10 +1,8 @@
 # description
-ofs-hor-example is an example with a horizontal view template named ofs-hor-views。
+ofs-hor-example is an example with a horizontal view template named ofs-views-layout。
 
-## see also ofs-hor-layout
-> ofs-hor-layout is a layout with a horizontal alignment。
-
-> ofs-hor-views is a view template with a horizontal alignment。
+## description
+> ofs-views-layout is a view template with a horizontal alignment。
 
 ## import in main.ts
 
@@ -13,9 +11,8 @@ ofs-hor-example is an example with a horizontal view template named ofs-hor-view
 
 import { createApp } from 'vue'
 import App from './App.vue'
-import OfsHorView from 'ofs-hor-view'
-import 'ofs-hor-view/lib/style.css'
-import 'ofs-hor-layout/lib/style.css'
+import OfsHorView from 'ofs-views-layout'
+import 'ofs-views-layout/lib/style.css'
 
 const app = createApp(App)
 app.use(ElementPlus)
@@ -66,8 +63,8 @@ app.use(ElementPlus)
 
 ```typescript
 import { reactive } from 'vue'
-import OfsHorView from 'ofs-hor-views'
-import type { SettingItem, SideMenu } from 'ofs-hor-types'
+import OfsHorView from 'ofs-views-layout'
+import type { SettingItem, SideMenu } from 'ofs-view-type'
 
 const state = reactive({
   options: [

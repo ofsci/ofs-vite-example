@@ -52,8 +52,8 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue'
-import OfsHorView from 'ofs-hor-views'
-import type { MenuOption, SettingItem } from 'ofs-hor-types'
+import OfsHorView from 'ofs-views-layout'
+import type { MenuOption, SettingItem } from 'ofs-view-type'
 
 const state = reactive({
   options: [
